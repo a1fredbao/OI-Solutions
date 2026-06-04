@@ -32,6 +32,8 @@ ST 表优化建图：[SCOI 萌萌哒](https://www.luogu.com.cn/problem/P3295)，
 
 强强图论建模：https://www.luogu.com.cn/article/q5qnsttz。
 
+二元类操作可以上图论建模然后定向。https://www.luogu.com.cn/problem/P16458，https://codeforces.com/contest/2192/problem/E
+
 ## 数据结构技巧
 
 查询区间出现元素种类相关：扫描线。然后 lst - 1, cur + 1。
