@@ -117,3 +117,9 @@ $a + b = a\ \mathrm{xor}\ b + 2(a\ \mathrm{and}\ b)$
 边双要记录边的编号。
 
 任何情况没道理用 `std::unordered_map`。`__gnu_pbds::gp_hash_table` 是无痛更好上位。
+
+Johnson 法则，需要这么解决：
+
+1. 提取出每一步操作的总体净收益 $\Delta_i$；
+2. 按照 $\Delta_i > 0, = 0, < 0$ 分类；
+3. 大于 $0$ 正着排序，小于 $0$ 倒着排序，等于 $0$ 的随便排；
