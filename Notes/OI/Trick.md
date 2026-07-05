@@ -84,6 +84,8 @@ $\max(a, b) = \frac{| a + b| + |a - b|}{2}$，曼哈顿转切比雪夫，https:/
 
 ## 字符串技巧
 
+哈希可以支持区间加！
+
 一个串是另一个串前后缀可以转化为 Trie 上 dfn 区间。
 
 回文串可以考虑最短回文串拼接。https://www.luogu.com.cn/article/uy6g6946
