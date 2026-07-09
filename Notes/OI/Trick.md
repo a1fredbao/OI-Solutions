@@ -40,7 +40,7 @@ ST 表优化建图：[SCOI 萌萌哒](https://www.luogu.com.cn/problem/P3295)，
 
 线段树二分见 jiangly 模板。你可能还得看看图论相关。
 
-Slope Trick: 见 [APIO2016] 烟花表演的题解以及 https://www.luogu.com.cn/article/84mah7rg。通常用于处理一类调整问题。提示：维护的是 $f_i(j) = kj + b$ 的 $k$。$b$ 通常可以直接加（分讨出来斜率为 $0$ 段上下平移的偏移量）。
+Slope Trick: 见 [APIO2016] 烟花表演的题解以及 (https://www.luogu.com.cn/article/84mah7rg)。这通常用于处理一类调整问题。提示：维护的是 $f_i(j) = kj + b$ 的 $k$。$b$ 通常可以直接加（分讨出来斜率为 $0$ 段上下平移的偏移量）。
 
 区间加区间除可以嗯暴力：区间 $\max - \frac \max v = \min - \frac{\min}{v}$ 直接变成加减操作。时间复杂度 $O(m \log n \log V)$。
 
