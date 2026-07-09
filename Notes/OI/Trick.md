@@ -110,7 +110,7 @@ $\mathrm{MEX}(p[1 : r]) = \min(p[r + 1: n])$
 
 做 $k$ 次操作，最优化某个值的时候可能可以转成若干原结构上不交的部分的和的最优化。
 
-$a + b = a\ \mathrm{xor}\ b + 2(a\ \mathrm{and}\ b)$
+$a + b = a\ \mathrm{xor}\ b + 2(a\ \mathrm{and}\ b) = a\ \mathrm{or}\ b + a\ \mathrm{and}\ b$
 
 `unsigned short` 两个乘起来会先转 `int`，所以可能溢出。
 
