@@ -42,7 +42,7 @@ ST 表优化建图：[SCOI 萌萌哒](https://www.luogu.com.cn/problem/P3295)，
 
 线段树二分见 jiangly 模板。你可能还得看看图论相关。
 
-Slope Trick: 见 [APIO2016] 烟花表演的题解以及 https://www.luogu.com.cn/article/84mah7rg。通常用于处理一类调整问题。提示：维护的是 $f_i(j) = kj + b$ 的 $k$。$b$ 通常可以直接加（分讨出来斜率为 $0$ 段上下平移的偏移量）。
+Slope Trick: 见 [APIO2016] 烟花表演的题解以及 (https://www.luogu.com.cn/article/84mah7rg)。这通常用于处理一类调整问题。提示：维护的是 $f_i(j) = kj + b$ 的 $k$。$b$ 通常可以直接加（分讨出来斜率为 $0$ 段上下平移的偏移量）。
 
 区间加区间除可以嗯暴力：区间 $\max - \frac \max v = \min - \frac{\min}{v}$ 直接变成加减操作。时间复杂度 $O(m \log n \log V)$。
 
@@ -86,6 +86,8 @@ $\max(a, b) = \frac{| a + b| + |a - b|}{2}$，曼哈顿转切比雪夫，https:/
 
 ## 字符串技巧
 
+哈希可以支持区间加！
+
 一个串是另一个串前后缀可以转化为 Trie 上 dfn 区间。
 
 回文串可以考虑最短回文串拼接。https://www.luogu.com.cn/article/uy6g6946
@@ -108,7 +110,9 @@ $\mathrm{MEX}(p[1 : r]) = \min(p[r + 1: n])$
 
 ## 其他技巧
 
-$a + b = a\ \mathrm{xor}\ b + 2(a\ \mathrm{and}\ b)$
+做 $k$ 次操作，最优化某个值的时候可能可以转成若干原结构上不交的部分的和的最优化。
+
+$a + b = a\ \mathrm{xor}\ b + 2(a\ \mathrm{and}\ b) = a\ \mathrm{or}\ b + a\ \mathrm{and}\ b$
 
 `unsigned short` 两个乘起来会先转 `int`，所以可能溢出。
 
@@ -117,3 +121,11 @@ $a + b = a\ \mathrm{xor}\ b + 2(a\ \mathrm{and}\ b)$
 边双要记录边的编号。
 
 任何情况没道理用 `std::unordered_map`。`__gnu_pbds::gp_hash_table` 是无痛更好上位。
+
+Johnson 法则，需要这么解决：
+
+1. 提取出每一步操作的总体净收益 $\Delta_i$；
+2. 按照 $\Delta_i > 0, = 0, < 0$ 分类；
+3. 大于 $0$ 正着排序，小于 $0$ 倒着排序，等于 $0$ 的随便排；
+
+有的时候需要凸性，可以通过分析所有 $x$ 的划分中一定会有一个 $\frac{x}{2}$ 的子集，然后 $\bmod x$ 维护 $x$ 个凸包。 
