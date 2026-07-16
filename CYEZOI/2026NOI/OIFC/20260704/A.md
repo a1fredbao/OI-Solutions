@@ -2,7 +2,7 @@
 
 摘要：dp，数学
 
-[传送门：https://www.luogu.com.cn/problem/Pxxxx](https://www.luogu.com.cn/problem/Pxxxx)
+[传送门：https://xinyoudui.com/ac/contest/7450109D2000B9E090E819/problem/45256](https://xinyoudui.com/ac/contest/7450109D2000B9E090E819/problem/45256)
 
 ## 题意
 
